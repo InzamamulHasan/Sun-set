@@ -1,8 +1,8 @@
-.bg{
+ .bg{
+
     width: 100%;
-    margin-top: 160px;
-    position: absolute;
     bottom: 0px;
+    position: fixed;
     
 }
 .bg img{
@@ -13,9 +13,10 @@ body{
     animation-name:col ;
    background-color: rgb(155, 145, 145);
     animation-name: col;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-timing-function: linear;
-    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
+    overflow-y: hidden;
 
 
 }
@@ -26,9 +27,10 @@ body{
     margin:auto;
     position: relative;
     animation-name: sun;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-timing-function: linear;
-    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
+
 
 }
 .src{
@@ -36,26 +38,41 @@ body{
     box-shadow: 0px 0px 30px 30px  rgba(246, 255, 0, 0.427);
     border-radius: 50%;
 }
-.moon{
-    margin-left:50px;
-    margin-top: 50px;
-    width: 150px;
-    position: absolute;
-    animation-name: mon;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: 5;
+
+.cre{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 200px;
+    background-color: transparent;
+    box-shadow: -20px 10px white;
+    animation-name:creation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+
 
 }
-.moon>img{
-    width: 100%;
-  
-   
+@keyframes creation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 @media(min-width:100px) and (max-width:1000px){
 
-    .moon{
-        width:80px ;
+    .cre{
+        width:50px ;
+        height: 50px;
+        margin-left: 100px;
     }
     .bg{
         bottom:0px;
@@ -66,20 +83,11 @@ body{
     }
 }
 @keyframes sun {
-    0%{
-        top:0;
-    }
-    25%{
-        top:200px;
-    }
-    50%{
-        top:400px;
-    }
-    75%{
-        top:600px;
-    }
+   0%{
+    top:0px;
+   }
     100%{
-        top: 800px;
+        top:900px;
     }
 }
 
@@ -93,23 +101,21 @@ body{
     50%{
         background-color: rgb(209, 209, 77)
     }
-    75%{
+    60%{
         background-color: yellow;
     }
-    100%{
+    80%{
         background-color: rgb(155, 145, 145);
+    }
+    100%{
+        background-color: rgb(110, 95, 95);
     }
 }
 @keyframes mon {
     0%{
         visibility: hidden;;
     }
-    25%{
-        visibility:hidden;
-    }
-    60%{
-        visibility: visible;
-    }
+   
     100%{
         visibility: visible;
     }
