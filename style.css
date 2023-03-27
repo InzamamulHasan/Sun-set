@@ -11,7 +11,7 @@
 body{
     border: none;
     animation-name:col ;
-   background-color: rgb(155, 145, 145);
+    background-color: rgb(155, 145, 145);
     animation-name: col;
     animation-duration: 15s;
     animation-timing-function: linear;
