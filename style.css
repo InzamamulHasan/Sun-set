@@ -1,0 +1,116 @@
+.bg{
+    width: 100%;
+    margin-top: 160px;
+    position: absolute;
+    bottom: 0px;
+    
+}
+.bg img{
+    width:100% ;}
+
+body{
+    border: none;
+    animation-name:col ;
+   background-color: rgb(155, 145, 145);
+    animation-name: col;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+
+
+}
+.s{
+    width: 13vh;
+    height: 13vh;
+    border: 0px solid black;
+    margin:auto;
+    position: relative;
+    animation-name: sun;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+
+}
+.src{
+    width: 100%;
+    box-shadow: 0px 0px 30px 30px  rgba(246, 255, 0, 0.427);
+    border-radius: 50%;
+}
+.moon{
+    margin-left:50px;
+    margin-top: 50px;
+    width: 150px;
+    position: absolute;
+    animation-name: mon;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+
+}
+.moon>img{
+    width: 100%;
+  
+   
+}
+@media(min-width:100px) and (max-width:1000px){
+
+    .moon{
+        width:80px ;
+    }
+    .bg{
+        bottom:0px;
+    }
+    .s{
+        width: 10vh;
+        height: 10vh;
+    }
+}
+@keyframes sun {
+    0%{
+        top:0;
+    }
+    25%{
+        top:200px;
+    }
+    50%{
+        top:400px;
+    }
+    75%{
+        top:600px;
+    }
+    100%{
+        top: 800px;
+    }
+}
+
+@keyframes col {
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color:rgb(226, 226, 140);
+    }
+    50%{
+        background-color: rgb(209, 209, 77)
+    }
+    75%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: rgb(155, 145, 145);
+    }
+}
+@keyframes mon {
+    0%{
+        visibility: hidden;;
+    }
+    25%{
+        visibility:hidden;
+    }
+    60%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+    }
+}
